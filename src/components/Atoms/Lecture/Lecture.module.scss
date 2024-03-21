@@ -1,0 +1,55 @@
+@import '../../../utils/mixins';
+
+.lecture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 345px;
+  padding: 15px 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--background-main);
+  border-radius: 15px;
+
+  @include screen(large) {
+    width: 385px;
+  }
+
+  &__name {
+    @include font('roboto', '18', 'semi-bold');
+    color: var(--text-title);
+    text-align: center;
+    margin: 0;
+  }
+
+  &__lecturer {
+    @include font('roboto', '16', 'regular');
+    color: var(--text-accent);
+    text-align: center;
+    margin: 0;
+  }
+
+  &__blank {
+    width: 345px;
+    min-height: 95px;
+
+    @include screen(large) {
+      width: 385px;
+    }
+  }
+}
+
+.activeDay {
+  display: flex;
+}
+
+.inactiveDay {
+  display: none;
+
+  @include screen(medium) {
+    display: flex;
+  }
+}

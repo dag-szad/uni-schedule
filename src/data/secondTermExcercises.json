@@ -1,0 +1,329 @@
+[
+  {
+    "subject": "Projektowanie graficzne",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 1, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 3, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 6, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 7, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      },
+      {
+        "id": "7Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 1, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      },
+      {
+        "id": "8Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 2, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-32" }]
+      }
+    ]
+  },
+  {
+    "subject": "Wybrane środowiska programowania",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 2, "dates": [1, 3, 5, 7], "room": "P-42" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 1, "dates": [1, 3, 5, 7], "room": "P-42" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 1, "dates": [2, 4, 6, 8], "room": "P-42" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 3, "dates": [1, 3, 5, 7], "room": "P-42" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "inż K. G",
+        "timeblocks": [{ "time": 1, "dates": [2, 4, 6, 8], "room": "P-43" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 3, "dates": [2, 4, 6, 8], "room": "P-42" }]
+      },
+      {
+        "id": "7Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 2, "dates": [2, 4, 6, 8], "room": "P-42" }]
+      },
+      {
+        "id": "8Group",
+        "lecturer": "inż K. G",
+        "timeblocks": [{ "time": 1, "dates": [1, 3, 5, 7], "room": "P-43" }]
+      }
+    ]
+  },
+  {
+    "subject": "Fizyka",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [{ "time": 3, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "Biofiz Lab" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [{ "time": 3, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "Biofiz Lab" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [{ "time": 2, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "Biofiz Lab" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [{ "time": 2, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "Biofiz Lab" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [
+          { "time": 5, "dates": [2, 4, 6, 8], "room": "Biofiz Lab" },
+          { "time": 1, "dates": [3, 5, 7], "room": "Biofiz Lab" }
+        ]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [
+          { "time": 5, "dates": [2, 4, 6, 8], "room": "Biofiz Lab" },
+          { "time": 1, "dates": [3, 5, 7], "room": "Biofiz Lab" }
+        ]
+      },
+      {
+        "id": "7Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "Biofiz Lab" }]
+      },
+      {
+        "id": "8Group",
+        "lecturer": "dr K. P",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "Biofiz Lab" }]
+      }
+    ]
+  },
+  {
+    "subject": "Algorytmy i złożoność",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr W. M",
+        "timeblocks": [
+          { "time": 4, "dates": [1, 3, 5, 7], "room": "P-21" },
+          { "time": 6, "dates": [2, 4, 6], "room": "P-21" }
+        ]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr W. M",
+        "timeblocks": [{ "time": 2, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-21" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "inż K. G",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-43" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "inż K. G",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-43" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "inż K. G",
+        "timeblocks": [{ "time": 3, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-43" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "inż K. G",
+        "timeblocks": [{ "time": 2, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-43" }]
+      },
+      {
+        "id": "7Group",
+        "lecturer": "dr W. M",
+        "timeblocks": [{ "time": 3, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-21" }]
+      },
+      {
+        "id": "8Group",
+        "lecturer": "dr W. M",
+        "timeblocks": [
+          { "time": 6, "dates": [1, 3, 5, 7], "room": "P-23" },
+          { "time": 1, "dates": [2, 4, 6], "room": "P-21" }
+        ]
+      }
+    ]
+  },
+  {
+    "subject": "Architektura systemów komputerowych",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-22" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr J. M",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-43" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-22" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr J. M",
+        "timeblocks": [{ "time": 7, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-43" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 2, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-22" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr J. M",
+        "timeblocks": [{ "time": 6, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-43" }]
+      },
+      {
+        "id": "7Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 6, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-22" }]
+      },
+      {
+        "id": "8Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 3, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-22" }]
+      }
+    ]
+  },
+  {
+    "subject": "Przedsiębiorczość",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 6, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 6, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 1, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 1, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 5, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 5, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      },
+      {
+        "id": "7Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 7, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      },
+      {
+        "id": "8Group",
+        "lecturer": "dr M. N",
+        "timeblocks": [{ "time": 7, "dates": [1, 3, 5, 7], "room": "Aula 3" }]
+      }
+    ]
+  },
+  {
+    "subject": "Matematyka dyskretna",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 7, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 7, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 6, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 6, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      },
+      {
+        "id": "7Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      },
+      {
+        "id": "8Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7], "room": "P-12" }]
+      }
+    ]
+  }
+]
