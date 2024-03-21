@@ -6,8 +6,8 @@ A small project containing a lesson plan for students. It takes into account dat
 
 ## Screenshots
 
-![Mobile Screenshot](public/preview/mobile_view.png)
-![Tablet Screenshot](public/preview/tablet_view.png)
+![Mobile Screenshot](src/preview/mobile_view.png)
+![Tablet Screenshot](src/preview/tablet_view.png)
 
 
 ## Deployment
