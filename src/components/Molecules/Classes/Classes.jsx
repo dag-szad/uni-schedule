@@ -20,7 +20,7 @@ const Classes = ({ date, group, active }) => {
       {classesTimeBlock.map((time) => (
         <li className={css.block} key={time}>
           <p className={css.block__time}>{classesTime[time - 1]}</p>
-          <div className={css.block__class}>
+          <div className={css.block__classes}>
             <Lecture date={date} time={time} active={active} />
             <Exercise date={date} group={group} time={time} active={active} />
           </div>

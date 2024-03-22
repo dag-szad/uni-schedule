@@ -1,3 +1,5 @@
+@import '#utils/_mixins.scss';
+
 .App {
   display: flex;
   flex-direction: column;
@@ -5,8 +7,16 @@
 
   gap: 30px;
 
-  padding: 45px 0;
+  padding: 45px 10px;
 
-  font-family: "Roboto", sans-serif;
+  @include screen(medium) {
+    padding: 45px 20px;
+  }
+
+  @include screen(large) {
+    padding: 45px 30px;
+  }
+
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0.25rem;
 }
