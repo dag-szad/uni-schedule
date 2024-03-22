@@ -29,10 +29,15 @@
 .buttons {
   list-style: none;
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: calc(20vw / 7);
 
   margin: 0;
   padding: 0;
+
+  @include screen(medium) {
+    gap: calc(10vw / 7);
+  }
 
   &__button {
     background-color: var(--background-primary);

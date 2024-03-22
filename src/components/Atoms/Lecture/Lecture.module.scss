@@ -1,4 +1,4 @@
-@import '../../../utils/mixins';
+@import '#utils/_mixins.scss';
 
 .lecture {
   display: flex;
@@ -7,15 +7,22 @@
   align-items: center;
   gap: 10px;
 
-  width: 345px;
-  padding: 15px 0;
+  width: clamp(250px, 75vw, 400px);
+
+  padding: 15px 10px;
+  margin: 0;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: var(--background-main);
   border-radius: 15px;
 
+  @include screen(medium) {
+    width: clamp(200px, 35vw, 350px);
+    height: min(50vw, 100px);
+  }
+
   @include screen(large) {
-    width: 385px;
+    width: clamp(350px, 35vw, 500px);
   }
 
   &__name {
@@ -33,11 +40,16 @@
   }
 
   &__blank {
-    width: 345px;
-    min-height: 95px;
+    width: clamp(250px, 75vw, 400px);
+    height: clamp(50px, 25vh, 75px);
+
+    @include screen(medium) {
+      width: clamp(300px, 40vw, 365px);
+      height: clamp(100px, 100px, 100px);
+    }
 
     @include screen(large) {
-      width: 385px;
+      width: clamp(420px, 35vw, 600px);
     }
   }
 }
