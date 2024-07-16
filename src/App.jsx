@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Buttons } from '#components/Molecules/Buttons/Buttons.jsx';
 import { Classes } from '#components/Molecules/Classes/Classes.jsx';
 import { CurrentDate } from '#components/Atoms/CurrentDate/CurrentDate.jsx';
+import { MenuButton } from '#components/Atoms/MenuButton/MenuButton.jsx';
 import classesDates from '#data/classesDates.json';
 
 import './App.scss';
+import { Menu } from './components/Molecules/Menu/Menu';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -46,6 +48,7 @@ function App() {
 
   return (
     <div className="App">
+      <Menu selectedDate={selectedDate} />
       <Buttons
         onDateChange={handleDateChange}
         onGroupChange={handleGroupChange}
@@ -54,7 +57,6 @@ function App() {
         selectedGroup={selectedGroup}
         activeDay={activeDay}
       />
-      <CurrentDate selectedDate={selectedDate} />
       <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
     </div>
   );
