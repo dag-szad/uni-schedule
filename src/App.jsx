@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Buttons } from '#components/Molecules/Buttons/Buttons.jsx';
 import { Classes } from '#components/Molecules/Classes/Classes.jsx';
+import { CurrentDate } from '#components/Atoms/CurrentDate/CurrentDate.jsx';
 import classesDates from '#data/classesDates.json';
 
 import './App.scss';
@@ -44,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       <Buttons
         onDateChange={handleDateChange}
         onGroupChange={handleGroupChange}
@@ -53,6 +54,7 @@ function App() {
         selectedGroup={selectedGroup}
         activeDay={activeDay}
       />
+      <CurrentDate selectedDate={selectedDate} />
       <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
     </div>
   );
