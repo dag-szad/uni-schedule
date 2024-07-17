@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import css from './Groups.module.scss';
 
 const Groups = ({ onGroupChange, selectedGroup }) => {
   const [activeButton, setActiveButton] = useState(null);
+
+  useEffect(() => {
+    const storedGroup = localStorage.getItem('group');
+    if (storedGroup) {
+      setActiveButton(Number(storedGroup));
+    } else {
+      setActiveButton(1);
+    }
+  }, []);
 
   const handleGroupClick = (group) => {
     onGroupChange(group);
@@ -18,9 +27,9 @@ const Groups = ({ onGroupChange, selectedGroup }) => {
         {[1, 2, 3, 4, 5, 6, 7, 8].map((group) => (
           <li key={group}>
             <button
-              className={`${css.buttons__button} ${activeButton === group ? css.active : ''} ${
-                selectedGroup === group ? css.activeGroup : ''
-              }`}
+              className={`${css.buttons__button} ${
+                activeButton === group ? css.active : ''
+              } ${selectedGroup === group ? css.activeGroup : ''}`}
               onClick={() => handleGroupClick(group)}
             >
               {group}

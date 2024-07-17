@@ -2,16 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 import { Buttons } from '#components/Molecules/Buttons/Buttons.jsx';
 import { Classes } from '#components/Molecules/Classes/Classes.jsx';
-import { CurrentDate } from '#components/Atoms/CurrentDate/CurrentDate.jsx';
-import { MenuButton } from '#components/Atoms/MenuButton/MenuButton.jsx';
-import classesDates from '#data/classesDates.json';
+import { Menu } from './components/Molecules/Menu/Menu.jsx';
+import { SaveButton } from './components/Atoms/SaveButton/SaveButton.jsx'; 
 
+import classesDates from '#data/classesDates.json';
 import './App.scss';
-import { Menu } from './components/Molecules/Menu/Menu';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedGroup, setSelectedGroup] = useState(1);
+  const [selectedGroup, setSelectedGroup] = useState(null);
   const [activeDay, setActiveDay] = useState('sunday');
 
   useEffect(() => {
@@ -46,9 +45,14 @@ function App() {
     setActiveDay(active);
   };
 
+  const saveHandler = () => {
+    localStorage.setItem('group', selectedGroup.toString());
+  };
+
   return (
     <div className="App">
       <Menu selectedDate={selectedDate} />
+      <SaveButton saveHandler={saveHandler} />
       <Buttons
         onDateChange={handleDateChange}
         onGroupChange={handleGroupChange}
