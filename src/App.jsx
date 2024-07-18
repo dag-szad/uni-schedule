@@ -3,10 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Buttons } from '#components/Molecules/Buttons/Buttons.jsx';
 import { Classes } from '#components/Molecules/Classes/Classes.jsx';
 import { Menu } from './components/Molecules/Menu/Menu.jsx';
-import { SaveButton } from './components/Atoms/SaveButton/SaveButton.jsx'; 
+import { SaveButton } from './components/Atoms/SaveButton/SaveButton.jsx';
 
 import classesDates from '#data/classesDates.json';
 import './App.scss';
+import { SideMenu } from './components/Molecules/SideMenu/SideMenu.jsx';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -52,7 +53,13 @@ function App() {
   return (
     <div className="App">
       <Menu selectedDate={selectedDate} />
-      <SaveButton saveHandler={saveHandler} />
+      <SideMenu menuType={'left'} />
+      <SideMenu
+        menuType={'right'}
+        onGroupChange={handleGroupChange}
+        selectedGroup={selectedGroup}
+        saveHandler={saveHandler}
+      />
       <Buttons
         onDateChange={handleDateChange}
         onGroupChange={handleGroupChange}
