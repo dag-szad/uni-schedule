@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import css from './Groups.module.scss';
 
 const Groups = ({ onGroupChange, selectedGroup }) => {
   const [activeButton, setActiveButton] = useState(null);
@@ -21,15 +20,15 @@ const Groups = ({ onGroupChange, selectedGroup }) => {
   };
 
   return (
-    <div className={css.groups}>
-      <h2 className={css.groups__title}>Grupa</h2>
-      <ul className={css.buttons}>
+    <div>
+      <h2>Grupa</h2>
+      <ul>
         {[1, 2, 3, 4, 5, 6, 7, 8].map((group) => (
           <li key={group}>
             <button
-              className={`${css.buttons__button} ${
-                activeButton === group ? css.active : ''
-              } ${selectedGroup === group ? css.activeGroup : ''}`}
+              // className={`${css.buttons__button} ${
+              //   activeButton === group ? css.active : ''
+              // } ${selectedGroup === group ? css.activeGroup : ''}`}
               onClick={() => handleGroupClick(group)}
             >
               {group}

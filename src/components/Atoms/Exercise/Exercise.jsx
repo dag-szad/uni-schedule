@@ -1,4 +1,3 @@
-import css from './Exercise.module.scss';
 import secondTermExercises from '#data/secondTermExcercises.json';
 
 const Exercise = ({ date, group, time, active }) => {
@@ -6,7 +5,9 @@ const Exercise = ({ date, group, time, active }) => {
 
   const exercisesForGroupAndDate = secondTermExercises.filter((exercise) =>
     exercise.groups.some(
-      (group) => group.id === specificGroupId && group.timeblocks.some((timeblock) => timeblock.dates.includes(date))
+      (group) =>
+        group.id === specificGroupId &&
+        group.timeblocks.some((timeblock) => timeblock.dates.includes(date))
     )
   );
 
@@ -14,16 +15,20 @@ const Exercise = ({ date, group, time, active }) => {
     exercise.groups.some(
       (group) =>
         group.id === specificGroupId &&
-        group.timeblocks.some((timeblock) => timeblock.time === time && timeblock.dates.includes(date))
+        group.timeblocks.some(
+          (timeblock) =>
+            timeblock.time === time && timeblock.dates.includes(date)
+        )
     )
   );
 
   return (
-    <div className={`${active === 'sunday' ? css.activeDay : css.inactiveDay}`}>
+    // <div className={`${active === 'sunday' ? css.activeDay : css.inactiveDay}`}>
+    <div>
       {exercisesForTime.length > 0 ? (
         exercisesForTime.map((exercise, index) => (
-          <div key={index} className={css.exercise}>
-            <h2 className={css.exercise__name}>{exercise.subject}</h2>
+          <div key={index}>
+            <h2>{exercise.subject}</h2>
             {exercise.groups.map(
               (group) =>
                 group.id === specificGroupId &&
@@ -31,9 +36,9 @@ const Exercise = ({ date, group, time, active }) => {
                   (block) =>
                     block.time === time &&
                     block.dates.includes(date) && (
-                      <div key={`${group.id}-${index}`} className={css.exercise__info}>
-                        <p className={css.exercise__lecturer}>{group.lecturer}</p>
-                        <p className={css.exercise__room}>{block.room}</p>
+                      <div key={`${group.id}-${index}`}>
+                        <p>{group.lecturer}</p>
+                        <p>{block.room}</p>
                       </div>
                     )
                 )
@@ -41,7 +46,7 @@ const Exercise = ({ date, group, time, active }) => {
           </div>
         ))
       ) : (
-        <div className={css.exercise__blank}> </div>
+        <div> </div>
       )}
     </div>
   );
