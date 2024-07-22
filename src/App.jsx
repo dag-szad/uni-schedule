@@ -6,7 +6,6 @@ import { Menu } from './components/Molecules/Menu/Menu.jsx';
 import { SaveButton } from './components/Atoms/SaveButton/SaveButton.jsx';
 
 import classesDates from '#data/classesDates.json';
-import './App.scss';
 import { SideMenu } from './components/Molecules/SideMenu/SideMenu.jsx';
 
 function App() {
@@ -51,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <Menu selectedDate={selectedDate} />
       <SideMenu menuType={'left'} />
       <SideMenu
