@@ -53,23 +53,30 @@ function App() {
 
   return (
     <div>
-      <Menu selectedDate={selectedDate} />
-      <SideMenu menuType={'left'} />
+      <GlobalStyles />
+      <Container>
+        <Menu selectedDate={selectedDate} />
+      </Container>
+      {/* <SideMenu menuType={'left'} />
       <SideMenu
         menuType={'right'}
         onGroupChange={handleGroupChange}
         selectedGroup={selectedGroup}
         saveHandler={saveHandler}
-      />
-      <Buttons
-        onDateChange={handleDateChange}
-        onGroupChange={handleGroupChange}
-        onActiveChange={handleActiveDayChange}
-        selectedDate={selectedDate}
-        selectedGroup={selectedGroup}
-        activeDay={activeDay}
-      />
-      <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
+      /> */}
+      <Container>
+        <Buttons
+          onDateChange={handleDateChange}
+          onGroupChange={handleGroupChange}
+          onActiveChange={handleActiveDayChange}
+          selectedDate={selectedDate}
+          selectedGroup={selectedGroup}
+          activeDay={activeDay}
+        />
+      </Container>
+      <Container>
+        <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
+      </Container>
     </div>
   );
 }
