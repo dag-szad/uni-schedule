@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-import { Buttons } from '#components/Molecules/Buttons/Buttons.jsx';
-import { Classes } from '#components/Molecules/Classes/Classes.jsx';
-import { Menu } from './components/Molecules/Menu/Menu.jsx';
-import { SaveButton } from './components/Atoms/SaveButton/SaveButton.jsx';
+import { Menu } from './components/molecules/Menu.jsx';
+import { SideMenu } from './components/molecules/SideMenu.jsx';
+import { Buttons } from '#components/molecules/Buttons.jsx';
+import { Classes } from '#components/molecules/Classes.jsx';
+
+import { GlobalStyles } from './components/styles/GlobalStyles.jsx';
+import { Container } from './components/styles/Container.styled.jsx';
 
 import classesDates from '#data/classesDates.json';
-import { SideMenu } from './components/Molecules/SideMenu/SideMenu.jsx';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -51,23 +53,30 @@ function App() {
 
   return (
     <div>
-      <Menu selectedDate={selectedDate} />
-      <SideMenu menuType={'left'} />
+      <GlobalStyles />
+      <Container>
+        <Menu selectedDate={selectedDate} />
+      </Container>
+      {/* <SideMenu menuType={'left'} />
       <SideMenu
         menuType={'right'}
         onGroupChange={handleGroupChange}
         selectedGroup={selectedGroup}
         saveHandler={saveHandler}
-      />
-      <Buttons
-        onDateChange={handleDateChange}
-        onGroupChange={handleGroupChange}
-        onActiveChange={handleActiveDayChange}
-        selectedDate={selectedDate}
-        selectedGroup={selectedGroup}
-        activeDay={activeDay}
-      />
-      <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
+      /> */}
+      <Container>
+        <Buttons
+          onDateChange={handleDateChange}
+          onGroupChange={handleGroupChange}
+          onActiveChange={handleActiveDayChange}
+          selectedDate={selectedDate}
+          selectedGroup={selectedGroup}
+          activeDay={activeDay}
+        />
+      </Container>
+      <Container>
+        <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
+      </Container>
     </div>
   );
 }

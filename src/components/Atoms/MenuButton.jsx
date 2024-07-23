@@ -1,5 +1,6 @@
-import termsButton from '../../../images/menu.svg';
-import profileButton from '../../../images/person.svg';
+import { ButtonBg, ButtonStyled, ButtonImg } from '../styles/Button.styled';
+import termsButton from '../../images/menu.svg';
+import profileButton from '../../images/person.svg';
 
 const MenuButton = ({ selectedType }) => {
   const leftModalOpen = () => {
@@ -17,17 +18,17 @@ const MenuButton = ({ selectedType }) => {
   };
 
   return (
-    <div>
+    <ButtonBg>
       {selectedType === 'terms' ? (
-        <button type="button" onClick={leftModalOpen}>
-          <img src={termsButton} />
-        </button>
+        <ButtonStyled type="button" onClick={leftModalOpen}>
+          <ButtonImg src={termsButton} />
+        </ButtonStyled>
       ) : (
-        <button type="button" onClick={rightModalOpen}>
-          <img src={profileButton} />
-        </button>
+        <ButtonStyled type="button" onClick={rightModalOpen}>
+          <ButtonImg src={profileButton} />
+        </ButtonStyled>
       )}
-    </div>
+    </ButtonBg>
   );
 };
 

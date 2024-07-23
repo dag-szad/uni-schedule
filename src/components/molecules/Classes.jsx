@@ -1,5 +1,5 @@
-import { Lecture } from '#components/Atoms/Lecture/Lecture.jsx';
-import { Exercise } from '#components/Atoms/Exercise/Exercise.jsx';
+import { Lecture } from '#components/atoms/Lecture.jsx';
+import { Exercise } from '#components/atoms/Exercise.jsx';
 
 const Classes = ({ date, group, active }) => {
   const classesTime = [
