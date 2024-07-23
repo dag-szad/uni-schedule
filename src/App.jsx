@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-import { Buttons } from '#components/Molecules/Buttons/Buttons.jsx';
-import { Classes } from '#components/Molecules/Classes/Classes.jsx';
-import { Menu } from './components/Molecules/Menu/Menu.jsx';
-import { SaveButton } from './components/Atoms/SaveButton/SaveButton.jsx';
+import { Menu } from './components/molecules/Menu.jsx';
+import { SideMenu } from './components/molecules/SideMenu.jsx';
+import { Buttons } from '#components/molecules/Buttons/Buttons.jsx';
+import { Classes } from '#components/molecules/Classes/Classes.jsx';
+
+import { GlobalStyles } from './components/styles/GlobalStyles.jsx';
+import { Container } from './components/styles/Container.styled.jsx';
 
 import classesDates from '#data/classesDates.json';
-import { SideMenu } from './components/Molecules/SideMenu/SideMenu.jsx';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
