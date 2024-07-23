@@ -12,7 +12,10 @@ const ButtonBg = styled.div`
   border: 1px solid #ffffff33;
   transition: border ease-in-out 0.5s, background ease-in-out 0.5s;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-within {
     border: 1px solid #ffffff4d;
     background-color: #ffffff1a;
   }
@@ -21,6 +24,7 @@ const ButtonBg = styled.div`
 const ButtonStyled = styled.button`
   background: none;
   border: none;
+  outline: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
