@@ -1,42 +1,42 @@
 import { Dates } from '#components/atoms/Dates.jsx';
-import { Groups } from '#components/atoms/Groups.jsx';
+import { TextButton } from '../styles/Button.styled';
+import styled from 'styled-components';
 
-const Buttons = ({
-  onDateChange,
-  onGroupChange,
-  onActiveChange,
-  selectedDate,
-  selectedGroup,
-  activeDay,
-}) => {
+const Buttons = ({ onDateChange, onActiveChange, selectedDate, activeDay }) => {
   return (
-    <div>
-      <div>
-        <button
+    <LocalContainer>
+      <Dates onDateChange={onDateChange} selectedDate={selectedDate} />
+      <DayContainer>
+        <TextButton
+          $isActive={'saturday' === activeDay}
           type="button"
-          // className={`${css.days__button} ${
-          //   activeDay === 'saturday' ? css.activeDay : ''
-          // }`}
           onClick={() => onActiveChange('saturday')}
         >
           Sobota
-        </button>
-        <button
+        </TextButton>
+        <TextButton
+          $isActive={'sunday' === activeDay}
           type="button"
-          // className={`${css.days__button} ${
-          //   activeDay === 'sunday' ? css.activeDay : ''
-          // }`}
           onClick={() => onActiveChange('sunday')}
         >
           Niedziela
-        </button>
-      </div>
-      <div>
-        <Dates onDateChange={onDateChange} selectedDate={selectedDate} />
-        <Groups onGroupChange={onGroupChange} selectedGroup={selectedGroup} />
-      </div>
-    </div>
+        </TextButton>
+      </DayContainer>
+    </LocalContainer>
   );
 };
+
+const DayContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+`;
+
+const LocalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+`;
 
 export { Buttons };
