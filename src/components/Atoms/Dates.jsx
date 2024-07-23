@@ -14,7 +14,7 @@ const Dates = ({ onDateChange, selectedDate }) => {
   };
 
   return (
-    <div>
+    <LocalContainer>
       <TimeSelectHeader>Zjazd</TimeSelectHeader>
       <LocalList>
         {[1, 2, 3, 4, 5, 6, 7, 8].map((date) => (
@@ -30,7 +30,7 @@ const Dates = ({ onDateChange, selectedDate }) => {
           </li>
         ))}
       </LocalList>
-    </div>
+    </LocalContainer>
   );
 };
 
@@ -41,6 +41,12 @@ const LocalList = styled.ul`
 
   display: flex;
   justify-content: space-around;
+`;
+
+const LocalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 `;
 
 export { Dates };

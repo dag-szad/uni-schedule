@@ -14,6 +14,7 @@ const CurrentDateHeader = styled.h2`
 `;
 
 const TimeSelectHeader = styled.h2`
+  text-align: center;
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
