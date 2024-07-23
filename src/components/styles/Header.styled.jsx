@@ -2,15 +2,21 @@ import styled from 'styled-components';
 
 const TimeHeader = styled.h1`
   font-size: 1.5rem;
-  font-weight: semibold;
+  font-weight: 600;
   margin: 0;
 `;
 
-const DateHeader = styled.h2`
+const CurrentDateHeader = styled.h2`
   font-size: 0.75rem;
-  font-weight: semibold;
+  font-weight: 600;
   color: #75a6eb;
   margin: 0;
 `;
 
-export { TimeHeader, DateHeader };
+const TimeSelectHeader = styled.h2`
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+`;
+
+export { TimeHeader, CurrentDateHeader, TimeSelectHeader };
