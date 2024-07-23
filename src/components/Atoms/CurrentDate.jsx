@@ -1,4 +1,4 @@
-import { TimeHeader, DateHeader } from '../styles/Header.styled';
+import { TimeHeader, CurrentDateHeader } from '../styles/Header.styled';
 import styled from 'styled-components';
 
 import classesDates from '#data/classesDates.json';
@@ -15,7 +15,7 @@ const CurrentDate = ({ selectedDate }) => {
   return (
     <LocalContainer>
       <TimeHeader>{`${dateObject.id} zjazd`}</TimeHeader>
-      <DateHeader>{dateObject.title}</DateHeader>
+      <CurrentDateHeader>{dateObject.title}</CurrentDateHeader>
     </LocalContainer>
   );
 };
