@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+import { TimeSelectHeader } from '../styles/Header.styled.jsx';
+import { ButtonBg, ButtonStyled } from '../styles/Button.styled.jsx';
 
 const Dates = ({ onDateChange, selectedDate }) => {
   const [activeButton, setActiveButton] = useState(null);
@@ -12,23 +15,32 @@ const Dates = ({ onDateChange, selectedDate }) => {
 
   return (
     <div>
-      <h2>Zjazd</h2>
-      <ul>
+      <TimeSelectHeader>Zjazd</TimeSelectHeader>
+      <LocalList>
         {[1, 2, 3, 4, 5, 6, 7, 8].map((date) => (
           <li key={date}>
-            <button
-              // className={`${css.buttons__button} ${
-              //   activeButton === date ? css.active : ''
-              // } ${selectedDate === date ? css.activeDate : ''}`}
-              onClick={() => handleDateClick(date)}
-            >
-              {date}
-            </button>
+            <ButtonBg $isActive={activeButton === date}>
+              <ButtonStyled
+                $isActive={activeButton === date}
+                onClick={() => handleDateClick(date)}
+              >
+                {date}
+              </ButtonStyled>
+            </ButtonBg>
           </li>
         ))}
-      </ul>
+      </LocalList>
     </div>
   );
 };
+
+const LocalList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+`;
 
 export { Dates };

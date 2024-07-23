@@ -10,25 +10,36 @@ const ButtonBg = styled.div`
 
   border-radius: 25px;
   border: 1px solid #ffffff33;
-  transition: border ease-in-out 0.5s, background ease-in-out 0.5s;
+
+  background-color: ${(props) => (props.$isActive ? '#75a6eb' : 'none')};
+
+  transition: border-color ease-in-out 0.5s, background-color ease-in-out 0.5s;
 
   &:hover,
   &:active,
   &:focus,
   &:focus-within {
     border: 1px solid #ffffff4d;
-    background-color: #ffffff1a;
+    background-color: ${(props) => (props.$isActive ? '#75a6eb' : '#ffffff1a')};
   }
 `;
 
 const ButtonStyled = styled.button`
+  width: 30px;
+  height: 30px;
+
   background: none;
   border: none;
   outline: none;
+
   cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-weight: 600;
+  color: #fff;
 `;
 
 const ButtonImg = styled.img`
