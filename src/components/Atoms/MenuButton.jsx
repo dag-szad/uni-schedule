@@ -1,5 +1,5 @@
-import termsButton from '../../../images/menu.svg';
-import profileButton from '../../../images/person.svg';
+import termsButton from '../../images/menu.svg';
+import profileButton from '../../images/person.svg';
 
 const MenuButton = ({ selectedType }) => {
   const leftModalOpen = () => {

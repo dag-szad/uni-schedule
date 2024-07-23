@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import { Menu } from './components/molecules/Menu.jsx';
 import { SideMenu } from './components/molecules/SideMenu.jsx';
-import { Buttons } from '#components/molecules/Buttons/Buttons.jsx';
-import { Classes } from '#components/molecules/Classes/Classes.jsx';
+import { Buttons } from '#components/molecules/Buttons.jsx';
+import { Classes } from '#components/molecules/Classes.jsx';
 
 import { GlobalStyles } from './components/styles/GlobalStyles.jsx';
 import { Container } from './components/styles/Container.styled.jsx';
