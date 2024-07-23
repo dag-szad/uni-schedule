@@ -1,5 +1,5 @@
-import { Dates } from '#components/Atoms/Dates/Dates.jsx';
-import { Groups } from '#components/Atoms/Groups/Groups.jsx';
+import { Dates } from '#components/atoms/Dates/Dates.jsx';
+import { Groups } from '#components/atoms/Groups/Groups.jsx';
 
 const Buttons = ({
   onDateChange,

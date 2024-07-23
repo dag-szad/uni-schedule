@@ -1,5 +1,5 @@
-import { Groups } from '../../Atoms/Groups/Groups.jsx';
-import { SaveButton } from '../../Atoms/SaveButton/SaveButton.jsx';
+import { Groups } from '../atoms/Groups.jsx';
+import { SaveButton } from '../atoms/SaveButton.jsx';
 
 const SideMenu = ({ menuType, onGroupChange, selectedGroup, saveHandler }) => {
   return (

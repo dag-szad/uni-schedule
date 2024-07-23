@@ -1,5 +1,5 @@
-import { MenuButton } from '../../Atoms/MenuButton/MenuButton.jsx';
-import { CurrentDate } from '../../Atoms/CurrentDate/CurrentDate.jsx';
+import { MenuButton } from '../atoms/MenuButton.jsx';
+import { CurrentDate } from '../atoms/CurrentDate.jsx';
 
 const Menu = ({ selectedDate }) => {
   return (
