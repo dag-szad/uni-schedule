@@ -1,4 +1,6 @@
-import React from 'react';
+import { TimeHeader, DateHeader } from '../styles/Header.styled';
+import styled from 'styled-components';
+
 import classesDates from '#data/classesDates.json';
 
 const CurrentDate = ({ selectedDate }) => {
@@ -11,11 +13,18 @@ const CurrentDate = ({ selectedDate }) => {
   }
 
   return (
-    <div>
-      <h1>{`${dateObject.id} zjazd`}</h1>
-      <h2>{dateObject.title}</h2>
-    </div>
+    <LocalContainer>
+      <TimeHeader>{`${dateObject.id} zjazd`}</TimeHeader>
+      <DateHeader>{dateObject.title}</DateHeader>
+    </LocalContainer>
   );
 };
+
+const LocalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+`;
 
 export { CurrentDate };
