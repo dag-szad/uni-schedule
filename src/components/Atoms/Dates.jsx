@@ -40,7 +40,9 @@ const LocalList = styled.ul`
   padding: 0;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 5px;
 `;
 
 const LocalContainer = styled.div`
