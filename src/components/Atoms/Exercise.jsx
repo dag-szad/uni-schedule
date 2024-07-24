@@ -1,4 +1,12 @@
 import secondTermExercises from '#data/secondTermExcercises.json';
+import {
+  Title,
+  SubTitle,
+  Lecturer,
+  Container,
+  ContainerLayout
+} from '../styles/ExercisesLectures.styled.jsx';
+import styled from 'styled-components';
 
 const Exercise = ({ date, group, time, active }) => {
   const specificGroupId = `${group}Group`;
@@ -28,7 +36,7 @@ const Exercise = ({ date, group, time, active }) => {
       {exercisesForTime.length > 0 ? (
         exercisesForTime.map((exercise, index) => (
           <div key={index}>
-            <h2>{exercise.subject}</h2>
+            <Title>{exercise.subject}</Title>
             {exercise.groups.map(
               (group) =>
                 group.id === specificGroupId &&
@@ -36,10 +44,10 @@ const Exercise = ({ date, group, time, active }) => {
                   (block) =>
                     block.time === time &&
                     block.dates.includes(date) && (
-                      <div key={`${group.id}-${index}`}>
-                        <p>{group.lecturer}</p>
-                        <p>{block.room}</p>
-                      </div>
+                      <ContainerLayout key={`${group.id}-${index}`}>
+                        <Lecturer>{group.lecturer}</Lecturer>
+                        <SubTitle>{block.room}</SubTitle>
+                      </ContainerLayout>
                     )
                 )
             )}
@@ -49,6 +57,7 @@ const Exercise = ({ date, group, time, active }) => {
         <div> </div>
       )}
     </div>
+    // </div>
   );
 };
 

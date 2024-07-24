@@ -19,7 +19,7 @@ const Classes = ({ date, group, active }) => {
     <LocalList>
       {classesTimeBlock.map((time) => (
         <li key={time}>
-          <p>{classesTime[time - 1]}</p>
+          <LocalTime>{classesTime[time - 1]}</LocalTime>
           <div>
             <Lecture date={date} time={time} active={active} />
             <Exercise date={date} group={group} time={time} active={active} />
@@ -40,12 +40,12 @@ const LocalList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 25px;
+`;
 
-  p {
-    font-size: 0.875rem;
-    color: #ffffff4d;
-    margin: 0 auto 10px;
-  }
+const LocalTime = styled.p`
+  font-size: 0.875rem;
+  color: #ffffff4d;
+  margin: 0 auto 10px;
 `;
 
 export { Classes };
