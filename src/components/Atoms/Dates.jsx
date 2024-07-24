@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { TimeSelectHeader } from '../styles/Header.styled.jsx';
+import { SecondHeader } from '../styles/Header.styled.jsx';
 import { ButtonBg, ButtonStyled } from '../styles/Button.styled.jsx';
 
 const Dates = ({ onDateChange, selectedDate }) => {
@@ -15,7 +15,7 @@ const Dates = ({ onDateChange, selectedDate }) => {
 
   return (
     <LocalContainer>
-      <TimeSelectHeader>Zjazd</TimeSelectHeader>
+      <SecondHeader>Zjazd</SecondHeader>
       <LocalList>
         {[1, 2, 3, 4, 5, 6, 7, 8].map((date) => (
           <li key={date}>
@@ -40,7 +40,9 @@ const LocalList = styled.ul`
   padding: 0;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 5px;
 `;
 
 const LocalContainer = styled.div`

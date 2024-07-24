@@ -1,5 +1,7 @@
+import { TextButton } from '../styles/Button.styled';
+
 const SaveButton = ({ saveHandler }) => {
-  return <button onClick={() => saveHandler()}>Zapisz grupę</button>;
+  return <TextButton onClick={() => saveHandler()}>Zapisz grupę</TextButton>;
 };
 
 export { SaveButton };
