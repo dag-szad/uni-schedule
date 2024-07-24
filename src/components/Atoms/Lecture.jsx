@@ -1,4 +1,10 @@
 import secondTermLectures from '#data/secondTermLectures.json';
+import {
+  Title,
+  Lecturer,
+  Container,
+  ContainerLayout,
+} from '../styles/ExercisesLectures.styled.jsx';
 
 const Lecture = ({ date, time, active }) => {
   const lessonsForDate = secondTermLectures.filter((lesson) =>
@@ -9,20 +15,20 @@ const Lecture = ({ date, time, active }) => {
   );
 
   return (
-    <div
+    <Container
     // className={`${active === 'saturday' ? css.activeDay : css.inactiveDay}`}
     >
       {finalLesson.length > 0 ? (
         finalLesson.map((lesson, index) => (
-          <div key={index}>
-            <h2>{lesson.subject}</h2>
-            <p>{lesson.lecturer}</p>
-          </div>
+          <ContainerLayout key={index}>
+            <Title>{lesson.subject}</Title>
+            <Lecturer>{lesson.lecturer}</Lecturer>
+          </ContainerLayout>
         ))
       ) : (
         <div> </div>
       )}
-    </div>
+    </Container>
   );
 };
 

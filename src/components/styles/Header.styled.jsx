@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const TimeHeader = styled.h1`
+const MainHeader = styled.h1`
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
@@ -13,11 +13,11 @@ const CurrentDateHeader = styled.h2`
   margin: 0;
 `;
 
-const TimeSelectHeader = styled.h2`
+const SecondHeader = styled.h2`
   text-align: center;
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
 `;
 
-export { TimeHeader, CurrentDateHeader, TimeSelectHeader };
+export { MainHeader, CurrentDateHeader, SecondHeader };
