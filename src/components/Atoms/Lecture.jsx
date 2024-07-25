@@ -15,9 +15,7 @@ const Lecture = ({ date, time, active }) => {
   );
 
   return (
-    <Container
-    // className={`${active === 'saturday' ? css.activeDay : css.inactiveDay}`}
-    >
+    <Container $active={active === 'saturday'}>
       {finalLesson.length > 0 ? (
         finalLesson.map((lesson, index) => (
           <ContainerLayout key={index}>
@@ -26,7 +24,7 @@ const Lecture = ({ date, time, active }) => {
           </ContainerLayout>
         ))
       ) : (
-        <div> </div>
+        <div></div>
       )}
     </Container>
   );
