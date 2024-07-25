@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+  display: ${(props) => (props.$active ? 'block' : 'none')};
+
   background-color: #ffffff1a;
   border: 1px solid #ffffff1a;
   border-radius: 15px;
@@ -22,7 +24,6 @@ const ContainerLayout = styled.div`
   flex-direction: column;
   gap: 10px;
 `;
-
 
 const Title = styled.h2`
   font-size: 1rem;
