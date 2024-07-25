@@ -12,7 +12,7 @@ import classesDates from '#data/classesDates.json';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedGroup, setSelectedGroup] = useState(null);
+  const [selectedGroup, setSelectedGroup] = useState('1');
   const [activeDay, setActiveDay] = useState('sunday');
 
   useEffect(() => {
