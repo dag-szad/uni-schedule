@@ -4,9 +4,8 @@ import {
   SubTitle,
   Lecturer,
   Container,
-  ContainerLayout
+  ContainerLayout,
 } from '../styles/ExercisesLectures.styled.jsx';
-import styled from 'styled-components';
 
 const Exercise = ({ date, group, time, active }) => {
   const specificGroupId = `${group}Group`;
@@ -31,8 +30,7 @@ const Exercise = ({ date, group, time, active }) => {
   );
 
   return (
-    // <div className={`${active === 'sunday' ? css.activeDay : css.inactiveDay}`}>
-    <div>
+    <Container $active={active === 'sunday'}>
       {exercisesForTime.length > 0 ? (
         exercisesForTime.map((exercise, index) => (
           <div key={index}>
@@ -54,10 +52,9 @@ const Exercise = ({ date, group, time, active }) => {
           </div>
         ))
       ) : (
-        <div> </div>
+        <div></div>
       )}
-    </div>
-    // </div>
+    </Container>
   );
 };
 
