@@ -28,7 +28,7 @@ const ContainerLayout = styled.div`
 const Title = styled.h2`
   font-size: 1rem;
   font-weight: 600;
-  margin: 0;
+  margin: 0 auto 10px;
 `;
 
 const SubTitle = styled.h3`
