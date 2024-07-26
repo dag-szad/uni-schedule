@@ -6,12 +6,12 @@ const SideMenu = ({ menuType, onGroupChange, selectedGroup, saveHandler }) => {
   return (
     <div>
       {menuType === 'left' ? (
-        <div id="overlayLeft">
-          <div id="modalLeft">
+        <Overlay id="overlayLeft">
+          <SideContainer id="modalLeft" $type={'left'}>
             <h1>SEMESTRY</h1>
-            <p>coś tam coś tam</p>
-          </div>
-        </div>
+            <p>Wybór semestrów: do zrobienia</p>
+          </SideContainer>
+        </Overlay>
       ) : (
         <Overlay id="overlayRight">
           <SideContainer id="modalRight" $type={'right'}>
