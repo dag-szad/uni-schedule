@@ -57,13 +57,13 @@ function App() {
       <Container>
         <Menu selectedDate={selectedDate} />
       </Container>
-      {/* <SideMenu menuType={'left'} />
+      <SideMenu menuType={'left'} />
       <SideMenu
         menuType={'right'}
         onGroupChange={handleGroupChange}
         selectedGroup={selectedGroup}
         saveHandler={saveHandler}
-      /> */}
+      />
       <Container>
         <Buttons
           onDateChange={handleDateChange}
