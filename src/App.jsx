@@ -11,7 +11,7 @@ import { Container } from './components/styles/Container.styled.jsx';
 import classesDates from '#data/classesDates.json';
 
 function App() {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState('1');
   const [selectedGroup, setSelectedGroup] = useState('1');
   const [activeDay, setActiveDay] = useState('sunday');
 
@@ -57,13 +57,13 @@ function App() {
       <Container>
         <Menu selectedDate={selectedDate} />
       </Container>
-      {/* <SideMenu menuType={'left'} />
+      <SideMenu menuType={'left'} />
       <SideMenu
         menuType={'right'}
         onGroupChange={handleGroupChange}
         selectedGroup={selectedGroup}
         saveHandler={saveHandler}
-      /> */}
+      />
       <Container>
         <Buttons
           onDateChange={handleDateChange}

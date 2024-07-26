@@ -1,26 +1,27 @@
 import { Groups } from '../atoms/Groups.jsx';
 import { SaveButton } from '../atoms/SaveButton.jsx';
+import { Overlay, SideContainer } from '../styles/SideMenu.styled.jsx';
 
 const SideMenu = ({ menuType, onGroupChange, selectedGroup, saveHandler }) => {
   return (
     <div>
       {menuType === 'left' ? (
-        <div id="overlayLeft" className="hidden">
-          <div id="modalLeft" className="hidden">
+        <Overlay id="overlayLeft">
+          <SideContainer id="modalLeft" $type={'left'}>
             <h1>SEMESTRY</h1>
-            <p>coś tam coś tam</p>
-          </div>
-        </div>
+            <p>Wybór semestrów: do zrobienia</p>
+          </SideContainer>
+        </Overlay>
       ) : (
-        <div id="overlayRight" className="hidden">
-          <div id="modalRight" className="hidden">
+        <Overlay id="overlayRight">
+          <SideContainer id="modalRight" $type={'right'}>
             <Groups
               onGroupChange={onGroupChange}
               selectedGroup={selectedGroup}
             />
             <SaveButton saveHandler={saveHandler} />
-          </div>
-        </div>
+          </SideContainer>
+        </Overlay>
       )}
     </div>
   );

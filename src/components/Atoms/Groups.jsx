@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { SecondHeader } from '../styles/Header.styled.jsx';
+import { ButtonBg, ButtonStyled } from '../styles/Button.styled.jsx';
 
 const Groups = ({ onGroupChange, selectedGroup }) => {
   const [activeButton, setActiveButton] = useState(null);
@@ -20,24 +23,43 @@ const Groups = ({ onGroupChange, selectedGroup }) => {
   };
 
   return (
-    <div>
-      <h2>Grupa</h2>
-      <ul>
+    <LocalContainer>
+      <SecondHeader>Grupa</SecondHeader>
+      <LocalList>
         {[1, 2, 3, 4, 5, 6, 7, 8].map((group) => (
           <li key={group}>
-            <button
-              // className={`${css.buttons__button} ${
-              //   activeButton === group ? css.active : ''
-              // } ${selectedGroup === group ? css.activeGroup : ''}`}
-              onClick={() => handleGroupClick(group)}
-            >
-              {group}
-            </button>
+            <ButtonBg $isActive={activeButton === group}>
+              <ButtonStyled
+                $isActive={activeButton === group}
+                onClick={() => handleGroupClick(group)}
+              >
+                {group}
+              </ButtonStyled>
+            </ButtonBg>
           </li>
         ))}
-      </ul>
-    </div>
+      </LocalList>
+    </LocalContainer>
   );
 };
+
+const LocalList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  max-width: 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+`;
+
+const LocalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+`;
 
 export { Groups };
