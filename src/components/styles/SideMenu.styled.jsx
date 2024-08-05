@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 const Overlay = styled.div`
-  pointer-events: none;
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  pointer-events: ${({ isOpen }) => (isOpen ? 'auto' : 'none')};
 
   background-color: #000;
   position: fixed;
   z-index: 10;
-  opacity: 0;
+  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   inset: 0;
 
   transition: opacity 0.3s ease-in-out;
@@ -25,7 +26,7 @@ const SideContainer = styled.div`
   background-color: #ffffff1a;
 
   border-radius: ${(props) =>
-    props.$type === 'left' ? '0 15px 15px 0' : '15px 0 0 15px;'};
+    props.$type === 'left' ? '0 15px 15px 0' : '15px 0 0 15px'};
   border: 1px solid #ffffff1a;
   transition: border ease-in-out 0.5s;
 
