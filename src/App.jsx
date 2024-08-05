@@ -15,6 +15,9 @@ function App() {
   const [selectedGroup, setSelectedGroup] = useState('1');
   const [activeDay, setActiveDay] = useState('sunday');
 
+  const [isLeftMenuOpen, setLeftMenuOpen] = useState(false);
+  const [isRightMenuOpen, setRightMenuOpen] = useState(false);
+
   useEffect(() => {
     const currentDate = new Date();
     const nearestDate = findNearestDate(currentDate);
@@ -51,15 +54,28 @@ function App() {
     localStorage.setItem('group', selectedGroup.toString());
   };
 
+  const handleLeftMenuToggle = () => {
+    setLeftMenuOpen(!isLeftMenuOpen);
+  };
+
+  const handleRightMenuToggle = () => {
+    setRightMenuOpen(!isRightMenuOpen);
+  };
+
   return (
     <div>
       <GlobalStyles />
       <Container>
-        <Menu selectedDate={selectedDate} />
+        <Menu
+          selectedDate={selectedDate}
+          onLeftButtonClick={handleLeftMenuToggle}
+          onRightButtonClick={handleRightMenuToggle}
+        />
       </Container>
-      <SideMenu menuType={'left'} />
+      <SideMenu menuType={'left'} isOpen={isLeftMenuOpen} />
       <SideMenu
         menuType={'right'}
+        isOpen={isRightMenuOpen}
         onGroupChange={handleGroupChange}
         selectedGroup={selectedGroup}
         saveHandler={saveHandler}
