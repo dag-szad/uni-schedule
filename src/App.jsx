@@ -15,6 +15,9 @@ function App() {
   const [selectedGroup, setSelectedGroup] = useState('1');
   const [activeDay, setActiveDay] = useState('sunday');
 
+  const [isLeftMenuOpen, setLeftMenuOpen] = useState(false);
+  const [isRightMenuOpen, setRightMenuOpen] = useState(false);
+
   useEffect(() => {
     const currentDate = new Date();
     const nearestDate = findNearestDate(currentDate);
@@ -51,18 +54,62 @@ function App() {
     localStorage.setItem('group', selectedGroup.toString());
   };
 
+  const handleLeftMenuToggle = () => {
+    setLeftMenuOpen(!isLeftMenuOpen);
+  };
+
+  const handleRightMenuToggle = () => {
+    setRightMenuOpen(!isRightMenuOpen);
+  };
+
+  const handleOverlayClick = (menuType) => {
+    if (menuType === 'left') {
+      setLeftMenuOpen(false);
+    } else if (menuType === 'right') {
+      setRightMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape') {
+        if (isLeftMenuOpen) {
+          setLeftMenuOpen(false);
+        } else if (isRightMenuOpen) {
+          setRightMenuOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [isLeftMenuOpen, isRightMenuOpen]);
+
   return (
     <div>
       <GlobalStyles />
       <Container>
-        <Menu selectedDate={selectedDate} />
+        <Menu
+          selectedDate={selectedDate}
+          onLeftButtonClick={handleLeftMenuToggle}
+          onRightButtonClick={handleRightMenuToggle}
+        />
       </Container>
-      <SideMenu menuType={'left'} />
       <SideMenu
-        menuType={'right'}
+        menuType="left"
+        isOpen={isLeftMenuOpen}
+        onOverlayClick={() => handleOverlayClick('left')}
+      />
+      <SideMenu
+        menuType="right"
+        isOpen={isRightMenuOpen}
         onGroupChange={handleGroupChange}
         selectedGroup={selectedGroup}
         saveHandler={saveHandler}
+        onOverlayClick={() => handleOverlayClick('right')}
       />
       <Container>
         <Buttons
