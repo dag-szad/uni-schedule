@@ -1,6 +1,6 @@
-import { Groups } from '../atoms/Groups.jsx';
-import { SaveButton } from '../atoms/SaveButton.jsx';
-import { Overlay, SideContainer } from '../styles/SideMenu.styled.jsx';
+import { Groups } from '#components/Atoms/Groups.jsx';
+import { SaveButton } from '#components/Atoms/SaveButton.jsx';
+import { Overlay, SideContainer } from '#components/styles/SideMenu.styled.jsx';
 
 const SideMenu = ({
   menuType,

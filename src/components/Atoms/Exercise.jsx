@@ -5,7 +5,7 @@ import {
   Lecturer,
   Container,
   ContainerLayout,
-} from '../styles/ExercisesLectures.styled.jsx';
+} from '#components/styles/ExercisesLectures.styled.jsx';
 
 const Exercise = ({ date, group, time, active }) => {
   const specificGroupId = `${group}Group`;

@@ -1,4 +1,4 @@
-import { MainHeader, CurrentDateHeader } from '../styles/Header.styled';
+import { MainHeader, CurrentDateHeader } from '#components/styles/Header.styled';
 import styled from 'styled-components';
 
 import classesDates from '#data/classesDates.json';
