@@ -1,5 +1,5 @@
-import { Groups } from '#components/Atoms/Groups.jsx';
-import { SaveButton } from '#components/Atoms/SaveButton.jsx';
+import { Groups } from '#components/atoms/Groups.jsx';
+import { SaveButton } from '#components/atoms/SaveButton.jsx';
 import { Overlay, SideContainer } from '#components/styles/SideMenu.styled.jsx';
 
 const SideMenu = ({
