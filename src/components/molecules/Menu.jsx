@@ -1,5 +1,5 @@
-import { MenuButton } from '../atoms/MenuButton.jsx';
-import { CurrentDate } from '../atoms/CurrentDate.jsx';
+import { MenuButton } from '#components/atoms/MenuButton.jsx';
+import { CurrentDate } from '#components/atoms/CurrentDate.jsx';
 
 import styled from 'styled-components';
 

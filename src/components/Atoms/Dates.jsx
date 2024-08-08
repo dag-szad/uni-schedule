@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SecondHeader } from '../styles/Header.styled.jsx';
-import { ButtonBg, ButtonStyled } from '../styles/Button.styled.jsx';
+import { SecondHeader } from '#components/styles/Header.styled.jsx';
+import { ButtonBg, ButtonStyled } from '#components/styles/Button.styled.jsx';
 
 const Dates = ({ onDateChange, selectedDate }) => {
   const [activeButton, setActiveButton] = useState(null);

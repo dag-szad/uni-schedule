@@ -1,5 +1,5 @@
 import { Dates } from '#components/atoms/Dates.jsx';
-import { TextButton } from '../styles/Button.styled';
+import { TextButton } from '#components/styles/Button.styled';
 import styled from 'styled-components';
 
 const Buttons = ({ onDateChange, onActiveChange, selectedDate, activeDay }) => {
