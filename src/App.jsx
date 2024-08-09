@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { Menu } from '#components/molecules/Menu.jsx';
 import { SideMenu } from '#components/molecules/SideMenu.jsx';
@@ -14,6 +15,7 @@ function App() {
   const [selectedDate, setSelectedDate] = useState('1');
   const [selectedGroup, setSelectedGroup] = useState('1');
   const [activeDay, setActiveDay] = useState('sunday');
+  const [selectedTerm, setSelectedTerm] = useState('2');
 
   const [isLeftMenuOpen, setLeftMenuOpen] = useState(false);
   const [isRightMenuOpen, setRightMenuOpen] = useState(false);
@@ -36,6 +38,14 @@ function App() {
       }
     });
     return nearestDate;
+  };
+
+  const PageTitle = ({ selectedTerm }) => {
+    useEffect(() => {
+      document.title = `Plan zajęć | ${selectedTerm} semestr`;
+    }, [selectedTerm]);
+
+    return null;
   };
 
   const handleDateChange = (date) => {
@@ -124,6 +134,7 @@ function App() {
       <Container>
         <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
       </Container>
+      <PageTitle selectedTerm={selectedTerm} />
     </div>
   );
 }
