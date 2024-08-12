@@ -1,3 +1,4 @@
+import { Terms } from '#components/atoms/Terms.jsx';
 import { Groups } from '#components/atoms/Groups.jsx';
 import { SaveButton } from '#components/atoms/SaveButton.jsx';
 import { Overlay, SideContainer } from '#components/styles/SideMenu.styled.jsx';
@@ -7,6 +8,8 @@ const SideMenu = ({
   isOpen,
   onGroupChange,
   selectedGroup,
+  onTermChange,
+  selectedTerm,
   saveHandler,
   onOverlayClick,
 }) => {
@@ -19,8 +22,8 @@ const SideMenu = ({
       <SideContainer onClick={handleContainerClick} $type={menuType}>
         {menuType === 'left' ? (
           <>
-            <h1>SEMESTRY</h1>
-            <p>Wybór semestrów: do zrobienia</p>
+            <Terms onTermChange={onTermChange} selectedTerm={selectedTerm} />
+            <SaveButton saveHandler={saveHandler} type={menuType} />
           </>
         ) : (
           <>
@@ -28,7 +31,7 @@ const SideMenu = ({
               onGroupChange={onGroupChange}
               selectedGroup={selectedGroup}
             />
-            <SaveButton saveHandler={saveHandler} />
+            <SaveButton saveHandler={saveHandler} type={menuType} />
           </>
         )}
       </SideContainer>

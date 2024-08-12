@@ -3,37 +3,37 @@ import styled from 'styled-components';
 import { SecondHeader } from '#components/styles/Header.styled.jsx';
 import { ButtonBg, ButtonStyled } from '#components/styles/Button.styled.jsx';
 
-const Groups = ({ onGroupChange }) => {
+const Terms = ({ onTermChange }) => {
   const [activeButton, setActiveButton] = useState(null);
 
   useEffect(() => {
-    const storedGroup = localStorage.getItem('group');
-    if (storedGroup) {
-      setActiveButton(Number(storedGroup));
+    const storedTerm = localStorage.getItem('term');
+    if (storedTerm) {
+      setActiveButton(Number(storedTerm));
     } else {
-      setActiveButton(1);
+      setActiveButton(2);
     }
   }, []);
 
-  const handleGroupClick = (group) => {
-    onGroupChange(group);
-    console.log('Wybrana grupa:', group);
+  const handleTermClick = (term) => {
+    onTermChange(term);
+    console.log('Wybrany semestr:', term);
 
-    setActiveButton(group);
+    setActiveButton(term);
   };
 
   return (
     <LocalContainer>
-      <SecondHeader>Grupa</SecondHeader>
+      <SecondHeader>Semestr</SecondHeader>
       <LocalList>
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((group) => (
-          <li key={group}>
-            <ButtonBg $isActive={activeButton === group}>
+        {[1, 2, 3, 4, 5, 6].map((term) => (
+          <li key={term}>
+            <ButtonBg $isActive={activeButton === term}>
               <ButtonStyled
-                $isActive={activeButton === group}
-                onClick={() => handleGroupClick(group)}
+                $isActive={activeButton === term}
+                onClick={() => handleTermClick(term)}
               >
-                {group}
+                {term}
               </ButtonStyled>
             </ButtonBg>
           </li>
@@ -62,4 +62,4 @@ const LocalContainer = styled.div`
   gap: 25px;
 `;
 
-export { Groups };
+export { Terms };
