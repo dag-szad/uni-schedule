@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { SecondHeader } from '#components/styles/Header.styled.jsx';
 import { ButtonBg, ButtonStyled } from '#components/styles/Button.styled.jsx';
 
-const Groups = ({ onGroupChange, selectedGroup }) => {
+const Groups = ({ onGroupChange }) => {
   const [activeButton, setActiveButton] = useState(null);
 
   useEffect(() => {
