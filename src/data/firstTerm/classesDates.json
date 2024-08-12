@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "date": "2023-10-8",
+    "title": "8 października 2023"
+  },
+  {
+    "id": 2,
+    "date": "2023-10-21",
+    "title": "21/22 października 2023"
+  },
+  {
+    "id": 3,
+    "date": "2023-11-4",
+    "title": "4/5 listopada 2023"
+  },
+  {
+    "id": 4,
+    "date": "2023-11-25",
+    "title": "25/26 listopada 2023"
+  },
+  {
+    "id": 5,
+    "date": "2023-12-9",
+    "title": "9/10 grudnia 2023"
+  },
+  {
+    "id": 6,
+    "date": "2024-01-13",
+    "title": "13/14 stycznia 2024"
+  },
+  {
+    "id": 7,
+    "date": "2024-01-27",
+    "title": "27/28 stycznia 2024"
+  },
+  {
+    "id": 8,
+    "date": "2024-02-11",
+    "title": "11 lutego 2024"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "subject": "Wstęp do informatyki",
+    "lecturer": "dr G. S",
+    "dates": [1],
+    "timeBlock": [1]
+  },
+  {
+    "subject": "Analiza matematyczna i algebra liniowa",
+    "lecturer": "dr A. M",
+    "dates": [2, 3, 4, 5, 6, 7],
+    "timeBlock": [1]
+  },
+  {
+    "subject": "Nauki techniczne",
+    "lecturer": "dr M. M",
+    "dates": [1],
+    "timeBlock": [2]
+  },
+  {
+    "subject": "Wstęp do informatyki",
+    "lecturer": "dr G. S",
+    "dates": [3, 5, 7],
+    "timeBlock": [2]
+  },
+  {
+    "subject": "Filozofia",
+    "lecturer": "prof G. I",
+    "dates": [2, 4, 6],
+    "timeBlock": [2]
+  },
+  {
+    "subject": "Analiza matematyczna i algebra liniowa",
+    "lecturer": "dr A. M",
+    "dates": [1],
+    "timeBlock": [3]
+  },
+  {
+    "subject": "Nauki techniczne",
+    "lecturer": "dr M. M",
+    "dates": [3, 5, 7],
+    "timeBlock": [3]
+  },
+  {
+    "subject": "Oprogramowanie użytkowe",
+    "lecturer": "dr Z. F",
+    "dates": [2, 4, 6],
+    "timeBlock": [3]
+  },
+  {
+    "subject": "Filozofia",
+    "lecturer": "prof G. I",
+    "dates": [1],
+    "timeBlock": [4]
+  },
+  {
+    "subject": "Nauki techniczne",
+    "lecturer": "dr M. M",
+    "dates": [3, 5, 7],
+    "timeBlock": [4]
+  },
+  {
+    "subject": "Podstawy programowania",
+    "lecturer": "prof M. P",
+    "dates": [2, 4, 6],
+    "timeBlock": [4]
+  },
+  {
+    "subject": "Oprogramowanie użytkowe",
+    "lecturer": "dr Z. F",
+    "dates": [1],
+    "timeBlock": [5]
+  },
+  {
+    "subject": "Podstawy programowania",
+    "lecturer": "prof M. P",
+    "dates": [2, 4, 6],
+    "timeBlock": [5]
+  },
+  {
+    "subject": "Podstawy programowania",
+    "lecturer": "prof M. P",
+    "dates": [1],
+    "timeBlock": [6]
+  }
+]
