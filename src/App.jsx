@@ -14,8 +14,8 @@ import classesDates from '#data/classesDates.json';
 function App() {
   const [selectedDate, setSelectedDate] = useState('1');
   const [selectedGroup, setSelectedGroup] = useState('1');
-  const [activeDay, setActiveDay] = useState('sunday');
   const [selectedTerm, setSelectedTerm] = useState('2');
+  const [activeDay, setActiveDay] = useState('sunday');
 
   const [isLeftMenuOpen, setLeftMenuOpen] = useState(false);
   const [isRightMenuOpen, setRightMenuOpen] = useState(false);
@@ -56,11 +56,16 @@ function App() {
     setSelectedGroup(group);
   };
 
+  const handleTermChange = (term) => {
+    setSelectedTerm(term);
+  };
+
   const handleActiveDayChange = (active) => {
     setActiveDay(active);
   };
 
   const saveHandler = () => {
+    localStorage.setItem('term', selectedTerm.toString());
     localStorage.setItem('group', selectedGroup.toString());
   };
 
@@ -111,6 +116,9 @@ function App() {
       <SideMenu
         menuType="left"
         isOpen={isLeftMenuOpen}
+        onTermChange={handleTermChange}
+        selectedTerm={selectedTerm}
+        saveHandler={saveHandler}
         onOverlayClick={() => handleOverlayClick('left')}
       />
       <SideMenu
