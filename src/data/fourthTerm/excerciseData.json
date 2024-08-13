@@ -1,1 +1,12 @@
-["?"]
+[
+  {
+    "subject": "?",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "?",
+        "timeblocks": [{ "time": 1, "dates": [1], "room": "-" }]
+      }
+    ]
+  }
+]
