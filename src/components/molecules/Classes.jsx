@@ -3,7 +3,7 @@ import { Exercise } from '#components/atoms/Exercise.jsx';
 
 import styled from 'styled-components';
 
-const Classes = ({ date, group, active }) => {
+const Classes = ({ date, group, active, selectedTerm }) => {
   const classesTime = [
     '8:00 - 9:30',
     '9:45 - 11:15',
@@ -21,8 +21,19 @@ const Classes = ({ date, group, active }) => {
         <li key={time}>
           <LocalTime>{classesTime[time - 1]}</LocalTime>
           <div>
-            <Lecture date={date} time={time} active={active} />
-            <Exercise date={date} group={group} time={time} active={active} />
+            <Lecture
+              date={date}
+              time={time}
+              active={active}
+              selectedTerm={selectedTerm}
+            />
+            <Exercise
+              date={date}
+              group={group}
+              time={time}
+              active={active}
+              selectedTerm={selectedTerm}
+            />
           </div>
         </li>
       ))}

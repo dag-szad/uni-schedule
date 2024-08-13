@@ -26,7 +26,7 @@ const Groups = ({ onGroupChange }) => {
     <LocalContainer>
       <SecondHeader>Grupa</SecondHeader>
       <LocalList>
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((group) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((group) => (
           <li key={group}>
             <ButtonBg $isActive={activeButton === group}>
               <ButtonStyled

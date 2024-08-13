@@ -1,15 +1,51 @@
-import { MainHeader, CurrentDateHeader } from '#components/styles/Header.styled';
+import React, { useEffect } from 'react';
+
+import {
+  MainHeader,
+  CurrentDateHeader,
+} from '#components/styles/Header.styled';
 import styled from 'styled-components';
 
-import classesDates from '#data/classesDates.json';
+import firstTermClassesDates from '#data/firstTerm/classesDates.json';
+import secondTermClassesDates from '#data/secondTerm/classesDates.json';
+import thirdTermClassesDates from '#data/thirdTerm/classesDates.json';
+import fourthTermClassesDates from '#data/fourthTerm/classesDates.json';
+import fifthTermClassesDates from '#data/fifthTerm/classesDates.json';
+import sixthTermClassesDates from '#data/sixthTerm/classesDates.json';
 
-const CurrentDate = ({ selectedDate }) => {
+const CurrentDate = ({ selectedDate, selectedTerm, classesDates }) => {
+  useEffect(() => {
+    const loadClassesDates = () => {
+      const termMap = {
+        1: firstTermClassesDates,
+        2: secondTermClassesDates,
+        3: thirdTermClassesDates,
+        4: fourthTermClassesDates,
+        5: fifthTermClassesDates,
+        6: sixthTermClassesDates,
+      };
+
+      const data = termMap[selectedTerm];
+
+      if (data) {
+        setClassesDates(data);
+      }
+    };
+
+    loadClassesDates();
+  }, [selectedTerm]);
+
   const dateObject = classesDates.find(
     (dateObj) => dateObj.id === selectedDate
   );
 
   if (!dateObject) {
-    return <div>Date not found</div>;
+    return (
+      <LocalContainer>
+        <MainHeader>Daty brak!</MainHeader>
+        <CurrentDateHeader>Do uzupełnienia</CurrentDateHeader>
+      </LocalContainer>
+    );
   }
 
   return (

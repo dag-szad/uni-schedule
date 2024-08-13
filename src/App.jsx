@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { Menu } from '#components/molecules/Menu.jsx';
 import { SideMenu } from '#components/molecules/SideMenu.jsx';
@@ -9,24 +8,56 @@ import { Classes } from '#components/molecules/Classes.jsx';
 import { GlobalStyles } from '#components/styles/GlobalStyles.jsx';
 import { Container } from '#components/styles/Container.styled.jsx';
 
-import classesDates from '#data/classesDates.json';
+import firstTermClassesDates from '#data/firstTerm/classesDates.json';
+import secondTermClassesDates from '#data/secondTerm/classesDates.json';
+import thirdTermClassesDates from '#data/thirdTerm/classesDates.json';
+import fourthTermClassesDates from '#data/fourthTerm/classesDates.json';
+import fifthTermClassesDates from '#data/fifthTerm/classesDates.json';
+import sixthTermClassesDates from '#data/sixthTerm/classesDates.json';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState('1');
   const [selectedGroup, setSelectedGroup] = useState('1');
-  const [selectedTerm, setSelectedTerm] = useState('2');
+  const [selectedTerm, setSelectedTerm] = useState(2);
   const [activeDay, setActiveDay] = useState('sunday');
+  const [classesDates, setClassesDates] = useState([]);
 
   const [isLeftMenuOpen, setLeftMenuOpen] = useState(false);
   const [isRightMenuOpen, setRightMenuOpen] = useState(false);
 
   useEffect(() => {
-    const currentDate = new Date();
-    const nearestDate = findNearestDate(currentDate);
-    setSelectedDate(nearestDate.id);
-  }, []);
+    if (classesDates.length > 0) {
+      const currentDate = new Date();
+      const nearestDate = findNearestDate(currentDate);
+      setSelectedDate(nearestDate.id);
+    }
+  }, [classesDates]);
+
+  useEffect(() => {
+    const loadClassesDates = () => {
+      const termMap = {
+        1: firstTermClassesDates,
+        2: secondTermClassesDates,
+        3: thirdTermClassesDates,
+        4: fourthTermClassesDates,
+        5: fifthTermClassesDates,
+        6: sixthTermClassesDates,
+      };
+
+      const data = termMap[selectedTerm];
+      if (data) {
+        setClassesDates(data);
+      }
+    };
+
+    loadClassesDates();
+  }, [selectedTerm]);
 
   const findNearestDate = (currentDate) => {
+    if (classesDates.length === 0) {
+      return null;
+    }
+
     let nearestDate = classesDates[0];
     let nearestDiff = Math.abs(new Date(nearestDate.date) - currentDate);
 
@@ -111,6 +142,7 @@ function App() {
           selectedDate={selectedDate}
           onLeftButtonClick={handleLeftMenuToggle}
           onRightButtonClick={handleRightMenuToggle}
+          classesDates={classesDates}
         />
       </Container>
       <SideMenu
@@ -140,7 +172,7 @@ function App() {
         />
       </Container>
       <Container>
-        <Classes date={selectedDate} group={selectedGroup} active={activeDay} />
+        <Classes date={selectedDate} selectedTerm={selectedTerm} group={selectedGroup} active={activeDay} />
       </Container>
       <PageTitle selectedTerm={selectedTerm} />
     </div>

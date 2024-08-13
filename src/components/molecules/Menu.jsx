@@ -3,11 +3,21 @@ import { CurrentDate } from '#components/atoms/CurrentDate.jsx';
 
 import styled from 'styled-components';
 
-const Menu = ({ selectedDate, onLeftButtonClick, onRightButtonClick }) => {
+const Menu = ({
+  selectedDate,
+  selectedTerm,
+  onLeftButtonClick,
+  onRightButtonClick,
+  classesDates,
+}) => {
   return (
     <LocalContainer>
       <MenuButton selectedType="terms" onButtonClick={onLeftButtonClick} />
-      <CurrentDate selectedDate={selectedDate} />
+      <CurrentDate
+        selectedDate={selectedDate}
+        selectedTerm={selectedTerm}
+        classesDates={classesDates}
+      />
       <MenuButton selectedType="profile" onButtonClick={onRightButtonClick} />
     </LocalContainer>
   );
