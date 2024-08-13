@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Menu } from '#components/molecules/Menu.jsx';
 import { SideMenu } from '#components/molecules/SideMenu.jsx';
 import { Buttons } from '#components/molecules/Buttons.jsx';
 import { Classes } from '#components/molecules/Classes.jsx';
+import { PageTitle } from '#components/atoms/PageTitle.jsx';
 
 import { GlobalStyles } from '#components/styles/GlobalStyles.jsx';
 import { Container } from '#components/styles/Container.styled.jsx';
@@ -25,6 +26,7 @@ function App() {
   const [isLeftMenuOpen, setLeftMenuOpen] = useState(false);
   const [isRightMenuOpen, setRightMenuOpen] = useState(false);
 
+  
   useEffect(() => {
     if (classesDates.length > 0) {
       const currentDate = new Date();
@@ -71,51 +73,6 @@ function App() {
     return nearestDate;
   };
 
-  const PageTitle = ({ selectedTerm }) => {
-    useEffect(() => {
-      document.title = `Plan zajęć | ${selectedTerm} semestr`;
-    }, [selectedTerm]);
-
-    return null;
-  };
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-
-  const handleGroupChange = (group) => {
-    setSelectedGroup(group);
-  };
-
-  const handleTermChange = (term) => {
-    setSelectedTerm(term);
-  };
-
-  const handleActiveDayChange = (active) => {
-    setActiveDay(active);
-  };
-
-  const saveHandler = () => {
-    localStorage.setItem('term', selectedTerm.toString());
-    localStorage.setItem('group', selectedGroup.toString());
-  };
-
-  const handleLeftMenuToggle = () => {
-    setLeftMenuOpen(!isLeftMenuOpen);
-  };
-
-  const handleRightMenuToggle = () => {
-    setRightMenuOpen(!isRightMenuOpen);
-  };
-
-  const handleOverlayClick = (menuType) => {
-    if (menuType === 'left') {
-      setLeftMenuOpen(false);
-    } else if (menuType === 'right') {
-      setRightMenuOpen(false);
-    }
-  };
-
   useEffect(() => {
     const handleEscapeKey = (event) => {
       if (event.key === 'Escape') {
@@ -134,45 +91,70 @@ function App() {
     };
   }, [isLeftMenuOpen, isRightMenuOpen]);
 
+  const handlers = {
+    dateChange: (date) => setSelectedDate(date),
+    groupChange: (group) => setSelectedGroup(group),
+    termChange: (term) => setSelectedTerm(term),
+    activeDayChange: (active) => setActiveDay(active),
+    save: () => {
+      localStorage.setItem('term', selectedTerm.toString());
+      localStorage.setItem('group', selectedGroup.toString());
+    },
+    leftMenuToggle: () => setLeftMenuOpen((prev) => !prev),
+    rightMenuToggle: () => setRightMenuOpen((prev) => !prev),
+    overlayClick: (menuType) => {
+      if (menuType === 'left') {
+        setLeftMenuOpen(false);
+      } else if (menuType === 'right') {
+        setRightMenuOpen(false);
+      }
+    },
+  };
+
   return (
     <div>
       <GlobalStyles />
       <Container>
         <Menu
           selectedDate={selectedDate}
-          onLeftButtonClick={handleLeftMenuToggle}
-          onRightButtonClick={handleRightMenuToggle}
+          onLeftButtonClick={handlers.leftMenuToggle}
+          onRightButtonClick={handlers.rightMenuToggle}
           classesDates={classesDates}
         />
       </Container>
       <SideMenu
         menuType="left"
         isOpen={isLeftMenuOpen}
-        onTermChange={handleTermChange}
+        onTermChange={handlers.termChange}
         selectedTerm={selectedTerm}
-        saveHandler={saveHandler}
-        onOverlayClick={() => handleOverlayClick('left')}
+        saveHandler={handlers.save}
+        onOverlayClick={() => handlers.overlayClick('left')}
       />
       <SideMenu
         menuType="right"
         isOpen={isRightMenuOpen}
-        onGroupChange={handleGroupChange}
+        onGroupChange={handlers.groupChange}
         selectedGroup={selectedGroup}
-        saveHandler={saveHandler}
-        onOverlayClick={() => handleOverlayClick('right')}
+        saveHandler={handlers.save}
+        onOverlayClick={() => handlers.overlayClick('right')}
       />
       <Container>
         <Buttons
-          onDateChange={handleDateChange}
-          onGroupChange={handleGroupChange}
-          onActiveChange={handleActiveDayChange}
+          onDateChange={handlers.dateChange}
+          onGroupChange={handlers.groupChange}
+          onActiveChange={handlers.activeDayChange}
           selectedDate={selectedDate}
           selectedGroup={selectedGroup}
           activeDay={activeDay}
         />
       </Container>
       <Container>
-        <Classes date={selectedDate} selectedTerm={selectedTerm} group={selectedGroup} active={activeDay} />
+        <Classes
+          date={selectedDate}
+          selectedTerm={selectedTerm}
+          group={selectedGroup}
+          active={activeDay}
+        />
       </Container>
       <PageTitle selectedTerm={selectedTerm} />
     </div>

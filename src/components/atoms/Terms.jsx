@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+
 import { SecondHeader } from '#components/styles/Header.styled.jsx';
 import { ButtonBg, ButtonStyled } from '#components/styles/Button.styled.jsx';
+import styled from 'styled-components';
 
 const Terms = ({ onTermChange }) => {
   const [activeButton, setActiveButton] = useState(null);

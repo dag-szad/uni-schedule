@@ -1,6 +1,7 @@
 import { Terms } from '#components/atoms/Terms.jsx';
 import { Groups } from '#components/atoms/Groups.jsx';
 import { SaveButton } from '#components/atoms/SaveButton.jsx';
+
 import { Overlay, SideContainer } from '#components/styles/SideMenu.styled.jsx';
 
 const SideMenu = ({
