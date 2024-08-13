@@ -1,4 +1,4 @@
-import secondTermExercises from '#data/secondTermExcercises.json';
+import React, { useState, useEffect } from 'react';
 import {
   Title,
   SubTitle,
@@ -7,10 +7,39 @@ import {
   ContainerLayout,
 } from '#components/styles/ExercisesLectures.styled.jsx';
 
-const Exercise = ({ date, group, time, active }) => {
+import firstTermExerciseData from '#data/firstTerm/excerciseData.json';
+import secondTermExerciseData from '#data/secondTerm/excerciseData.json';
+import thirdTermExerciseData from '#data/thirdTerm/excerciseData.json';
+import fourthTermExerciseData from '#data/fourthTerm/excerciseData.json';
+import fifthTermExerciseData from '#data/fifthTerm/excerciseData.json';
+import sixthTermExerciseData from '#data/sixthTerm/excerciseData.json';
+
+const Exercise = ({ date, group, time, active, selectedTerm }) => {
+  const [exerciseData, setExerciseData] = useState([]);
+
+  useEffect(() => {
+    const loadExerciseData = () => {
+      const termMap = {
+        1: firstTermExerciseData,
+        2: secondTermExerciseData,
+        3: thirdTermExerciseData,
+        4: fourthTermExerciseData,
+        5: fifthTermExerciseData,
+        6: sixthTermExerciseData,
+      };
+
+      const data = termMap[selectedTerm];
+      if (data) {
+        setExerciseData(data);
+      }
+    };
+
+    loadExerciseData();
+  }, [selectedTerm]);
+
   const specificGroupId = `${group}Group`;
 
-  const exercisesForGroupAndDate = secondTermExercises.filter((exercise) =>
+  const exercisesForGroupAndDate = exerciseData.filter((exercise) =>
     exercise.groups.some(
       (group) =>
         group.id === specificGroupId &&
