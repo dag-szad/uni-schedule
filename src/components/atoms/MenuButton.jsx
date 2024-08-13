@@ -1,6 +1,11 @@
-import { ButtonBg, ButtonStyled, ButtonImg } from '#components/styles/Button.styled';
 import termsButton from '../../images/menu.svg';
 import profileButton from '../../images/person.svg';
+
+import {
+  ButtonBg,
+  ButtonStyled,
+  ButtonImg,
+} from '#components/styles/Button.styled';
 
 const MenuButton = ({ selectedType, onButtonClick }) => {
   return (

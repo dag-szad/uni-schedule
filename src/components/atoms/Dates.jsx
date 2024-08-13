@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import { useState } from 'react';
+
 import { SecondHeader } from '#components/styles/Header.styled.jsx';
 import { ButtonBg, ButtonStyled } from '#components/styles/Button.styled.jsx';
+import styled from 'styled-components';
 
-const Dates = ({ onDateChange, selectedDate }) => {
+const Dates = ({ onDateChange }) => {
   const [activeButton, setActiveButton] = useState(null);
 
   const handleDateClick = (date) => {
