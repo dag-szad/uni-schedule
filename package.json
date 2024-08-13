@@ -24,13 +24,5 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "vite": "^5.1.6"
-  },
-  "imports": {
-    "#*": {
-      "default": "./src/*",
-      "components": "./src/components/*",
-      "data": "./src/data/*",
-      "utils": "./src/utils/*"
-    }
   }
 }
