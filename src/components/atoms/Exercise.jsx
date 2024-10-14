@@ -60,7 +60,7 @@ const Exercise = ({ date, group, time, active, selectedTerm }) => {
   );
 
   return (
-    <Container $active={active === 'sunday'}>
+    <Container $active={active === 'exercisesDay'}>
       {exercisesForTime.length > 0 ? (
         exercisesForTime.map((exercise, index) => (
           <div key={index}>

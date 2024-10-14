@@ -9,18 +9,18 @@ const Buttons = ({ onDateChange, onActiveChange, selectedDate, activeDay }) => {
       <Dates onDateChange={onDateChange} selectedDate={selectedDate} />
       <DayContainer>
         <TextButton
-          $isActive={'saturday' === activeDay}
+          $isActive={'lecturesDay' === activeDay}
           type="button"
-          onClick={() => onActiveChange('saturday')}
+          onClick={() => onActiveChange('lecturesDay')}
         >
-          Sobota
+          Wykłady
         </TextButton>
         <TextButton
-          $isActive={'sunday' === activeDay}
+          $isActive={'exercisesDay' === activeDay}
           type="button"
-          onClick={() => onActiveChange('sunday')}
+          onClick={() => onActiveChange('exercisesDay')}
         >
-          Niedziela
+          Ćwiczenia
         </TextButton>
       </DayContainer>
     </LocalContainer>

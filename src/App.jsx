@@ -19,8 +19,8 @@ import sixthTermClassesDates from '#data/sixthTerm/classesDates.json';
 function App() {
   const [selectedDate, setSelectedDate] = useState('1');
   const [selectedGroup, setSelectedGroup] = useState('1');
-  const [selectedTerm, setSelectedTerm] = useState(2);
-  const [activeDay, setActiveDay] = useState('sunday');
+  const [selectedTerm, setSelectedTerm] = useState(3);
+  const [activeDay, setActiveDay] = useState('exercisesDay');
   const [classesDates, setClassesDates] = useState([]);
 
   const [isLeftMenuOpen, setLeftMenuOpen] = useState(false);

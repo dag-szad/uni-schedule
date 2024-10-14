@@ -1,11 +1,262 @@
 [
   {
-    "subject": "?",
+    "subject": "Technologie Internetu Rzeczy",
     "groups": [
       {
         "id": "1Group",
-        "lecturer": "?",
-        "timeblocks": [{ "time": 1, "dates": [1], "room": "-" }]
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 1, "dates": [2, 4, 6, 8], "room": "P-23" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 3, "dates": [2, 4, 6, 8], "room": "P-23" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 2, "dates": [1, 3, 5, 7], "room": "P-23" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 2, "dates": [2, 4, 6, 8], "room": "P-23" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 1, "dates": [1, 3, 5, 7], "room": "P-23" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr M. M",
+        "timeblocks": [{ "time": 3, "dates": [1, 3, 5, 7], "room": "P-23" }]
+      }
+    ]
+  },
+  {
+    "subject": "Podstawy grafiki komputerowej",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [
+          { "time": 3, "dates": [1, 3, 5, 7], "room": "P-32" },
+          { "time": 2, "dates": [2, 4, 6, 8], "room": "P-32" }
+        ]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 6, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-32" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-32" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-32" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [
+          { "time": 2, "dates": [1, 3, 5, 7], "room": "P-32" },
+          { "time": 3, "dates": [2, 4, 6, 8], "room": "P-32" }
+        ]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr A. S",
+        "timeblocks": [{ "time": 1, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-32" }]
+      }
+    ]
+  },
+  {
+    "subject": "Technologie internetowe",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 3, "dates": [2, 4, 6, 8], "room": "P-42" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 5, "dates": [1, 3, 5, 7], "room": "P-42" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 6, "dates": [1, 3, 5, 7], "room": "P-42" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 5, "dates": [2, 4, 6, 8], "room": "P-42" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 4, "dates": [1, 3, 5, 7], "room": "P-42" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "mgr A. H",
+        "timeblocks": [{ "time": 4, "dates": [2, 4, 6, 8], "room": "P-42" }]
+      }
+    ]
+  },
+  {
+    "subject": "Podstawy sztucznej inteligencji",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "mgr K. G",
+        "timeblocks": [{ "time": 4, "dates": [1, 3, 5, 7], "room": "P-33" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "mgr K. G",
+        "timeblocks": [{ "time": 4, "dates": [2, 4, 6, 8], "room": "P-33" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "mgr K. G",
+        "timeblocks": [{ "time": 3, "dates": [1, 3, 5, 7], "room": "P-33" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "mgr K. G",
+        "timeblocks": [{ "time": 3, "dates": [2, 4, 6, 8], "room": "P-33" }]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "mgr K. G",
+        "timeblocks": [{ "time": 2, "dates": [2, 4, 6, 8], "room": "P-33" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "mgr K. G",
+        "timeblocks": [{ "time": 5, "dates": [1, 3, 5, 7], "room": "P-33" }]
+      }
+    ]
+  },
+  {
+    "subject": "Problemy społeczne i zawodowe informatyki",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr J. P",
+        "timeblocks": [{ "time": 4, "dates": [2, 4, 6, 8], "room": "P-21" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr J. P",
+        "timeblocks": [{ "time": 4, "dates": [1, 3, 5, 7], "room": "P-21" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr J. P",
+        "timeblocks": [{ "time": 2, "dates": [2, 4, 6, 8], "room": "P-21" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr J. P",
+        "timeblocks": [
+          { "time": 2, "dates": [1], "room": "P-21" },
+          { "time": 5, "dates": [3, 5, 7], "room": "P-21" }
+        ]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr J. P",
+        "timeblocks": [{ "time": 3, "dates": [1, 3, 5, 7], "room": "P-21" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr J. P",
+        "timeblocks": [{ "time": 3, "dates": [2, 4, 6, 8], "room": "P-21" }]
+      }
+    ]
+  },
+  {
+    "subject": "Metody probabilistyczne i statystyka",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 5, "dates": [1, 3, 5, 7], "room": "P-22" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 5, "dates": [2, 4, 6, 8], "room": "P-22" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 3, "dates": [2, 4, 6, 8], "room": "P-22" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [
+          { "time": 3, "dates": [1, 3, 7], "room": "P-22" },
+          { "time": 6, "dates": [5], "room": "P-22" }
+        ]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 4, "dates": [2, 4, 6, 8], "room": "P-22" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "dr A. M",
+        "timeblocks": [{ "time": 4, "dates": [1, 3, 5, 7], "room": "P-22" }]
+      }
+    ]
+  },
+  {
+    "subject": "Systemy operacyjne",
+    "groups": [
+      {
+        "id": "1Group",
+        "lecturer": "mgr K. P",
+        "timeblocks": [{ "time": 6, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-23" }]
+      },
+      {
+        "id": "2Group",
+        "lecturer": "mgr K. P",
+        "timeblocks": [{ "time": 7, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-23" }]
+      },
+      {
+        "id": "3Group",
+        "lecturer": "mgr K. P",
+        "timeblocks": [{ "time": 4, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-23" }]
+      },
+      {
+        "id": "4Group",
+        "lecturer": "mgr A. S",
+        "timeblocks": [
+          { "time": 1, "dates": [3, 5, 7, 9], "room": "P-41" },
+          { "time": 2, "dates": [3, 5, 7], "room": "P-41" },
+          { "time": 3, "dates": [5], "room": "P-41" }
+        ]
+      },
+      {
+        "id": "5Group",
+        "lecturer": "mgr K. P",
+        "timeblocks": [{ "time": 5, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-23" }]
+      },
+      {
+        "id": "6Group",
+        "lecturer": "mgr K. P",
+        "timeblocks": [{ "time": 2, "dates": [1, 2, 3, 4, 5, 6, 7, 8], "room": "P-23" }]
       }
     ]
   }
