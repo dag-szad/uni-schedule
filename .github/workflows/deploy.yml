@@ -30,10 +30,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      - name: List files in src/components/atoms
+        run: ls -alh src/components/atoms
       - name: Build
         run: npm run build
-      - name: List files in dist
-        run: ls -alh dist
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
