@@ -45,7 +45,7 @@ const Lecture = ({ date, time, active, selectedTerm }) => {
   );
 
   return (
-    <Container $active={active === 'saturday'}>
+    <Container $active={active === 'lecturesDay'}>
       {finalLesson.length > 0 ? (
         finalLesson.map((lesson, index) => (
           <ContainerLayout key={index}>
