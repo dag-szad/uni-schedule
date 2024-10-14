@@ -10,5 +10,8 @@ export default defineConfig({
       '#components': path.resolve(__dirname, 'src/components'),
       '#data': path.resolve(__dirname, 'src/data'),
     }
-  }
+  },
+  build: {
+    outDir: 'dist',
+  },
 });
