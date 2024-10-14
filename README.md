@@ -8,7 +8,7 @@ This is the second version of the project, allowing me to improve and modernize 
 As the new semester begins, I saw it as an opportunity to refresh the design and experiment with the "bento" design approach. 🍱
 
 ## Demo
-🔗 [Finished website](https://dag-szad.github.io/UniSchedule/)
+🔗 [Finished website](https://dag-szad.github.io/uni-schedule/)
 
 ## Tech Stack
 🔨 **HTML**, **CSS** with **Styled Components**, **Java Script** and **React**.
